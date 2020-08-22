@@ -18,6 +18,7 @@ import LoginDialog from '../../components/Login/Components/LoginDialog'
 export default {
   data () {
     return {
+      // 是否显示登录框
       isShowLoginDialog: false
     }
   },
@@ -27,10 +28,16 @@ export default {
   },
 
   methods: {
+    /**
+     * 显示登录输入框
+     */
     showLoginDialog: function () {
       this.$emit('showBlur', true)
       this.isShowLoginDialog = true
     },
+    /**
+     * 关闭登录输入框
+     */
     closeLoginDialog: function () {
       this.$emit('closeBlur', false)
       this.isShowLoginDialog = false

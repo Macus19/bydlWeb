@@ -5,19 +5,22 @@
       <el-menu-item index="/CeremonySignUp">
         <div class="navi-item">典礼报名管理</div>
       </el-menu-item>
-      <el-menu-item index="2">
+      <el-menu-item index="/OnSiteManage">
         <div class="navi-item">主控现场管理</div>
       </el-menu-item>
       <el-menu-item index="/UserManage">
         <div class="navi-item">用户账号管理</div>
       </el-menu-item>
-      <el-menu-item index="4">
+      <el-menu-item index="/MiniProgramSetting">
         <div class="navi-item">小程序设置</div>
       </el-menu-item>
-      <el-menu-item index="5">
+      <el-menu-item index="/BackgroundSystemSetting">
         <div class="navi-item">系统后台设置</div>
       </el-menu-item>
     </el-menu>
+    <!-- <div class="lock-container" v-if="!isLogin">
+      <i class="el-icon-lock"></i>
+    </div> -->
   </div>
 </template>
 
@@ -25,16 +28,18 @@
 export default {
   data () {
     return {
+      isLogin: false
     }
   },
-
   components: {},
-
   methods: {}
 }
 
 </script>
 <style scoped>
+.navi-container{
+  position: relative;
+}
 .navi-item{
   margin: 0;
   height: 40px;
@@ -46,5 +51,11 @@ export default {
 }
 .navi-el-menu /deep/ .el-menu-item.is-active{
   border-bottom: none
+}
+.lock-container {
+  position: absolute;
+  font-size: 28px;
+  left: 20px;
+  top:40px;
 }
 </style>

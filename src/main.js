@@ -5,8 +5,10 @@ import App from './App'
 import router from './router'
 import Element from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
+import http from '../src/assets/config/http'
 
 Vue.use(Element)
+Vue.prototype.axios = http
 
 Vue.config.productionTip = false
 

@@ -48,7 +48,7 @@ export default {
   position: relative;
 }
 .main{
-  height: 88vh;
+  height: 85vh;
   /* padding-bottom: 150px; */
 }
 .mask{
